@@ -1,203 +1,229 @@
-* {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .background-red {
-    background-color: #782221;
-  }
-  
-  .background-black {
-    background-color: #2c1d27;
-  }
-  
-  .background-gold {
-    background-color: #dbc2a4;
-  }
-  main {
-    width: 1160px;
-    margin: auto;
-  }
-  
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-flow: column;
-    padding: 50px 0px;
-    color: white;
-  }
-  figure{
-    width: 150px;
-    height: 150px;
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 20px goldenrod;
-  }
-  img:hover{
-    transform: scale(1.5);
-
-  }
-  .header-description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    flex-flow: column;
-    margin-top: 30px;;
-  }
-  
-  .contact {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-  } 
-  .contact > a {
-    display: inline-block;
-    position: relative;
-    width: 200px;
-    text-align: center;
-    color: white;
-    z-index: 1;
-    text-decoration: none;
-    justify-content: space-between;    
-    font-family: "Lato", serif;
-    font-weight: 300;
-  }
-  .contact > a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: .01em;
-  height: .1em;
-  width: 100%;
-  background: white;
-  transition: height .25s cubic-bezier(.6,0,.4,1);
-  }
-  .contact > a:hover::after{
-    height: .2em;
-  }
-  .contact > a:first-child {
-    text-align: start;
-  }  
-  .contact > a:last-child{
-    text-align: end;
-  }
-  #flex-row{
-    display: flex;
-  }
-  .Expériences{
-    width: 70%;
-    height: 800px;
-    padding-top: 15px;
-    padding-left: 3%;
-  }
-  .Apropos{
-    width: 30%;
-    height: 950px;
-    padding-right: 3%;
-    padding-top: 15px;
-  }
- h5,h3{
+@font-face {
+  font-family: "Raileway";
+  src: url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,500&display=swap');
+}
+.container{
+  width: 1160px;
+  margin-left: 350px;
+  border-right-style: solid;
+}
+.header-box{
+  box-sizing: content-box;
+  height: 250px;
+  background-color: #782221;
+  margin-left: auto;
+}
+header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+  padding: 50px 0px;
+  color: white;
+}
+.photo img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px goldenrod;
+  cursor: zoom-out;
+}
+img:hover{
+  transform: scale(1.5);
+}
+h1,h2{
+  font-family: "lato", serif;
+  font-weight: 900;
+  font-size: 1.8em;
+}
+#contact address{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-left: 5px;
+  padding-right: 15px;
+  padding-top: 5px;
+  font-size: 1.2em;
+  border-style: solid;
+  background-color: #2c1d27;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Raileway", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+a:hover{
+  text-decoration: underline;
+  color: white;
+}
+a:first-child{
+  padding-left: 30px;
+}
+a:last-child{
+  padding-right: 30px;
+}
+#flex-row{
+  display: flex;
+}
+.Expériences{
+  width: 70%;
+  height: 800px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.leftbox{
+  width: 30%;
+  height: 1250px;
+  padding-right: 3%;
+  padding-top: 5px;
+  background-color: #782221;
+}
+.Apropos h3{
+  padding-left: 20px;
   border-style: 20px solid;
   background-color: #dbc2a4;
-  padding: 5px;
- }
- h5{
-  padding-left: 8%;
- }
- .divers-liste{
-  padding-left: 12%;
-  color: white;
-  padding-top: 40px;
-  padding-bottom:40px;
-  font-family: "Raileway", sans-serif;
-  font-weight: 400;
- }
- .about{
-  padding-left: 9%;
-  text-align: justify;
-  color: white;
-  text-indent: 8%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-family: "Raileway", sans-serif;
-  font-weight: 400;
- }
- h4{
-  padding-top: 15px;
- }
- h3{
-  padding-left: 60px;
- }
- h3:hover{
-  background-color: #782221;
-  width: .01px;
- }
- .période{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: "Raileway", sans-serif;
-  font-weight: 400;
- }
- .fonctions{
-  margin-left: 10%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: "Raileway", sans-serif;
-  font-weight: 400;
- }
- p{
-  margin-bottom: 15px;
-  font-family: "Raileway", sans-serif;
-  font-weight: 400;
- }
-h1,h2{
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-}
-h3,h4,h5{
-  font-family: "Lato", serif;
+  height: 28px;
+  width: 280px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  font-family: "lato", serif;
   font-weight: 700;
+}
+.divers-liste{
+padding-left: 15%;
+color: white;
+padding-top: 20px;
+padding-bottom: 50px;
+font-family: "Raileway", sans-serif;
+font-weight: 400;
+font-size: 1em;
+}
+.about{
+padding-left: 8%;
+text-align: justify;
+color: white;
+text-indent: 8%;
+margin-top: 25px;
+margin-bottom: 50px;
+font-size: 1em;
+width: 270px;
+font-family: "Raileway", sans-serif;
+font-weight: 400;
+font-size: 1em;
+}
+.Expériences{
+  margin-left: 15px;
+  padding-top: 5px;
+}
+.Expériences h3{
+display: flex;
+align-items: center;
+padding-left: 20px;
+border-style: 20px solid;
+background-color: #dbc2a4;
+height: 30px;
+width: 720px;
+font-family: "lato", serif;
+font-weight: 900;
+font-size: 1.3em;
+}
+.Expériences h3:hover{
+  border-left: 10px solid #782221;
+}
+.Expériences ul{
+  padding-left: 2px;
+}
+.Expériences li{
+  padding-bottom: 20px;
+  font-family: "Raileway", sans-serif;
+  font-weight: 400;
+}
+.Entreprise{
+  font-family: "Raileway", serif;
+  font-weight: 400;
+}
+.période{
+padding-top: 10px;
+padding-bottom: 10px;
+font-family: "Raileway", sans-serif;
+font-weight: 400;
+}
+.fonctions{
+margin-left: 10%;
+padding-top: 15px;
+padding-bottom: 15px;
+font-family: "Raileway", sans-serif;
+font-weight: 400;
+}
+p{
+margin-bottom: 20px;
+font-family: "Raileway", sans-serif;
+font-weight: 400;
 }
 .footer{
   width: 1160px;
-  height: 150px;
+  height: 200px;
+  background-color: #782221;
+  padding-top: 5px;
 }
-.footer-social{
-  height: 5vh;
-  width: 50vh;
-  padding-top: 30px;
-  padding-left: 355px;
-  padding-bottom: 5px;
+small{
+  color: white;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.rs{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
-  opacity: 0.5;
+  padding-left: 450px;
+  padding-right: 450px;
+  padding-top: 5px;
 }
-.footer-social:hover{
-  opacity: 1;
+.rs1 img{
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
 }
-h6{
-  color: white;
-  padding-top:  40px;
-  font-family: "Lato", serif;
-  font-weight: 700;
-  text-align: center;
+.rs1 img:hover{
+  opacity: 0.7;
+}
+.rs2 img{
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
+}
+.rs2 img:hover{
+  opacity: 0.7;
+}
+.rs3 img{
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
+}
+.rs3 img:hover{
+  opacity: 0.7;
 }
 
 
- 
- 
- 
+
+
+
+
+
+
+
+
+
+
 
 
  
